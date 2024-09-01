@@ -1,24 +1,31 @@
 # Minecraft Package Manager (MCPM) 📦
 
-Minecraft Package Manager (MCPM) is an advanced CLI tool for setup Minecraft Instances and Servers. Possibilities of
+**Minecraft Package Manager (MCPM)** is an advanced CLI tool for setup Minecraft Instances and Servers. Possibilities of
 this tool is much higher than managing big and complex Modpacks and Servers.
 
 ## Introduction
 
-NOTICE: MCPM is now on the very beginning (EXPERIMENTAL STAGE).
+NOTICE: MCPM is now at the very beginning (EXPERIMENTAL) stage.
 we ask Developers to help the project. Pull Requests are welcome.
 
 mcpm is builded into EXE installation for Windows which is available
 from [Releases Page](https://github.com/ArmanStudios/mcpm/releases).
 
-### mcpm Support
+Some of the Features are:
 
-Currently, mcpm Support map are defined as below:
+- API Interactions
+- Version Control (Soon)
+- Advanced CLI Intercations
+- ... 
+
+### Loader Support
+
+Currently, mcpm Support for Loaders is defined as below:
 
 <table>
     <thead>
     <tr>
-        <th>Loader</th>
+        <th>Loaders</th>
         <th>Resources</th>
         <th>API/Method</th>
         <th>Supported</th>
@@ -58,8 +65,8 @@ Currently, mcpm Support map are defined as below:
 
 ## Usage
 
-mcpm is accessible using Command-Line Interface (CLI) using Command Prompt (cmd) to interact with instance resources.
-Shortcut on cli is ```mcpm```.
+mcpm is Command-Line Interface (CLI) accessible using Shell (cmd or powershell...) to interact with resources in the Path.
+the Shortcut is ```mcpm```.
 ### Quickstart
 - Installing Plugins:
 ```mcpm install plugin <plugins_id> ...```
