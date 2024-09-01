@@ -64,9 +64,9 @@ Shortcut on cli is ```mcpm```.
 - Installing Plugins:
 ```mcpm install plugin <plugins_id> ...```
 <br>Arguments: 
-- ```plugins_id```: Identifier of Plugin. accepts Multiple Ids. Id of Plugin is shown on the Plugin's Page url.
-<br>Example: ```mcpm install plugin 34315 28140``` (Installs Vault and Luckperms)
-<br>(Id of Vault is <u>34315</u> as in ```https://www.spigotmc.org/resources/vault.34315/```)
+  - ```plugins_id```: Identifier of Plugin. accepts Multiple Ids. Id of Plugin is shown on the Plugin's Page url.
+  <br>Example: ```mcpm install plugin 34315 28140``` (Installs Vault and Luckperms)
+  <br>(Id of Vault is <u>34315</u> as in ```https://www.spigotmc.org/resources/vault.34315/```)
 
 
 
