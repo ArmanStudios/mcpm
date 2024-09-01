@@ -169,3 +169,4 @@ plugins
 .mcpm
 test.py
 mcpm.spec
+README.html
