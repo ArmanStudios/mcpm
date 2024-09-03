@@ -24,3 +24,11 @@ def generate_file_from_request_with_progress(resp, filename, path, task = None, 
             file.write(chunk)
             progress.update(task, advance=len(chunk))
         file.close()
+
+
+def get_filename_from_request(resp: Response):
+    filename = resp.headers.get('Content-Disposition')
+    if filename is not None:
+        return filename
+    else:
+        return resp.url.split('/')[-1]
