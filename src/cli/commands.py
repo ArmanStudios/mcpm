@@ -7,7 +7,7 @@ from rich.progress import *
 from src.utils.spiget_api import *
 
 
-def install_plugin(plugins_input: list[int, str]):
+def install_plugin(plugins_input: list[str]):
     plugins_name = []
     rprint('\nDownloading requested Plugins...')
     with Progress(
