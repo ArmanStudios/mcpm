@@ -10,7 +10,7 @@ app = typer.Typer(invoke_without_command=True)
 
 
 @app.command()
-def install(resource_type: str, resource: list[int, str]):
+def install(resource_type: str, resource: list[str]):
     match resource_type:
         case 'plugin':
             install_plugin(resource)
