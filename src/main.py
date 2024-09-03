@@ -2,11 +2,8 @@ import typer
 
 from src.cli.commands import *
 
-# import src.cli.install as command_install
 
-
-app = typer.Typer(invoke_without_command=True)
-# app.add_typer(command_install.app, name='install')
+app = typer.Typer(no_args_is_help=True)
 
 
 @app.command()
