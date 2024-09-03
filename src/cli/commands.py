@@ -5,11 +5,12 @@ import requests
 from rich.progress import *
 
 from src.utils.spiget_api import *
+from src.utils.translation import __
 
 
 def install_plugin(plugins_input: list[str]):
     plugins_name = []
-    rprint('\nDownloading requested Plugins...')
+    rprint(__('cli.commands.install.plugin.status.downloading'))
     with Progress(
             SpinnerColumn(style='blue'),
             TextColumn('{task.description}'),
@@ -30,11 +31,11 @@ def install_plugin(plugins_input: list[str]):
             filename = filename[:-4]
             plugins_name.append(filename)
     result = ' '.join(plugins_name)
-    rprint(f"[green]Successfully installed Plugins:[/green] [yellow]{result}[/yellow]")
+    rprint(__("cli.commands.install.plugin.status.success", {'result': result}))
 
 
 def install_resourcepack(urls: list[str]):
-    rprint('\nDownloading requested Resource Packs...')
+    rprint(__("cli.commands.install.resource-pack.status.downloading"))
     packs = []
     with Progress(
             SpinnerColumn(style='blue'),
@@ -58,4 +59,4 @@ def install_resourcepack(urls: list[str]):
             os.rename(rf'{os.getcwd()}\.mcpm\cache\resourcepacks\{filename}', destination_path)
             packs.append(filename)
     result = ' '.join(packs)
-    rprint(f"[green]Successfully installed Resource Packs:[/green] [yellow]{result}[/yellow]")
+    rprint(__("cli.commands.install.resource-pack.status.success", {'result': result}))

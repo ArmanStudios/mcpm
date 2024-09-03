@@ -1,0 +1,18 @@
+{
+  "commands": {
+    "install": {
+      "plugin": {
+        "status": {
+          "success": "[green]Successfully installed Plugins:[/green] [yellow]{result}[/yellow]",
+          "downloading": "\n[purple]Downloading requested Plugins...[/purple]"
+        }
+      },
+      "resource-pack": {
+        "status": {
+          "success": "[green]Successfully installed Resource Packs:[/green] [yellow]{result}[/yellow]",
+          "downloading": "\n[purple]Downloading requested Resource Packs...[/purple]"
+        }
+      }
+    }
+  }
+}
