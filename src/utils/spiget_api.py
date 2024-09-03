@@ -28,6 +28,6 @@ def download(resource_id: int, prog):
 
     file_size = int(resp_file.headers.get('Content-Length', 0))
     task = prog.add_task(f"{resp_json['name']} v{resp_version_name}", total=file_size)
-    generate_file_from_request_with_progress(resp_file, file_name, rf'{os.getcwd()}\.mcpm\cache\spiget', task, prog)
+    generate_file_from_request_with_progress(resp_file, file_name, rf'{os.getcwd()}\.mcpm\cache\plugins\spiget', task, prog)
 
     return fr'{os.getcwd()}\.mcpm\cache\spiget\{file_name}'
