@@ -65,7 +65,7 @@ Currently, mcpm Support for Loaders is defined as below:
 
 ## Usage
 
-mcpm is Command-Line Interface (CLI) accessible using Shell (cmd or powershell...) to interact with resources in the Path.
+mcpm Command-Line Interface (CLI) is accessible using Shell (cmd or powershell...) to interact with resources in the Path.
 the Shortcut is ```mcpm```.
 ### Quickstart
 - Installing Plugins:
