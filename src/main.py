@@ -13,6 +13,8 @@ def install(resource_type: str, resources: list[str]):
             install_plugin(resources)
         case 'resource-pack' | 'rp' | 'resourcepack':
             install_resourcepack(resources)
+        case 'shader-pack' | 'sp' | 'shaderpack' | 'shader':
+            install_shaderpack(resources)
 
 
 @app.command(hidden=True)

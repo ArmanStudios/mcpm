@@ -12,6 +12,12 @@
           "success": "[green]Successfully installed Resource Packs:[/green] [yellow]{result}[/yellow]",
           "downloading": "\n[purple]Downloading requested Resource Packs...[/purple]"
         }
+      },
+      "shader-pack": {
+        "status": {
+          "success": "[green]Successfully installed Shader Packs:[/green] [yellow]{result}[/yellow]",
+          "downloading": "\n[purple]Downloading requested Shader Packs...[/purple]"
+        }
       }
     }
   }

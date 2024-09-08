@@ -60,3 +60,31 @@ def install_resourcepack(urls: list[str]):
             packs.append(filename)
     result = ' '.join(packs)
     rprint(__("cli.commands.install.resource-pack.status.success", {'result': result}))
+
+
+def install_shaderpack(urls: list[str]):
+    rprint(__("cli.commands.install.shader-pack.status.downloading"))
+    packs = []
+    with Progress(
+            SpinnerColumn(style='blue'),
+            TextColumn('{task.description}'),
+            TaskProgressColumn(),
+            BarColumn(),
+            DownloadColumn(),
+            TimeElapsedColumn()
+    ) as prog:
+        for url in urls:
+            resp = requests.get(url, stream=True)
+            filename = get_filename_from_request(resp)
+            file_size = int(resp.headers.get('Content-Length', 0))
+            task = prog.add_task(f"{filename}", total=file_size)
+            generate_file_from_request_with_progress(resp, filename, rf'{os.getcwd()}\.mcpm\cache\shaderpacks', task, prog)
+            destination_path = fr'{os.getcwd()}\shaderpacks\{filename}'
+            if not os.path.exists(fr'{os.getcwd()}\shaderpacks'):
+                os.makedirs(fr'{os.getcwd()}\shaderpacks')
+            if os.path.exists(destination_path):
+                os.remove(destination_path)
+            os.rename(rf'{os.getcwd()}\.mcpm\cache\shaderpacks\{filename}', destination_path)
+            packs.append(filename)
+    result = ' '.join(packs)
+    rprint(__("cli.commands.install.shader-pack.status.success", {'result': result}))

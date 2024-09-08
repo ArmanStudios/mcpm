@@ -12,6 +12,12 @@
           "success": "[green]Resource Pack haye zir ba movafaqiat nasb shodand:[/green] [yellow]{result}[/yellow]",
           "downloading": "\n[purple]Dar hal Bargirie Resource Pack haye darkhast shode...[/purple]"
         }
+      },
+      "shader-pack": {
+        "status": {
+          "success": "[green]Shader Pack haye zir ba movafaqiat nasb shodand:[/green] [yellow]{result}[/yellow]",
+          "downloading": "\n[purple]Dar hal Bargirie Shader Pack haye darkhast shode...[/purple]"
+        }
       }
     }
   }
