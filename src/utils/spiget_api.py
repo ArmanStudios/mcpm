@@ -6,7 +6,7 @@ from rich import print as rprint
 SPIGET_API_ENDPOINT = "https://api.spiget.org/v2/"
 
 
-def download(resource_id: int, prog):
+def download(resource_id: str, prog):
     resp = requests.get(SPIGET_API_ENDPOINT+f"resources/{resource_id}")
 
     resp_json = resp.json()
