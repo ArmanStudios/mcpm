@@ -33,8 +33,13 @@ Currently, mcpm Support for Loaders is defined as below:
     </thead>
     <tbody>
     <tr>
-        <td>Vanilla (Base)</td>
-        <td>Resource Packs, Worlds, Versions, Datapacks, Shader Packs, etc.</td>
+        <td rowspan="2">Vanilla (Base)</td>
+        <td>Resource Packs and Shader Packs</td>
+        <td>URL Address</td>
+        <td>✅ (Experimental)</td>
+    </tr>
+    <tr>
+        <td>Worlds, Versions, Data Packs, etc.</td>
         <td>-</td>
         <td>🚧 (Planned)</td>
     </tr>
