@@ -1,0 +1,18 @@
+{
+  "commands": {
+    "install": {
+      "plugin": {
+        "status": {
+          "success": "[green]Plugin haye zir ba movafaqiat nasb shodand:[/green] [yellow]{result}[/yellow]",
+          "downloading": "\n[purple]Dar hal Bargirie Plugin haye darkhast shode...[/purple]"
+        }
+      },
+      "resource-pack": {
+        "status": {
+          "success": "[green]Resource Pack haye zir ba movafaqiat nasb shodand:[/green] [yellow]{result}[/yellow]",
+          "downloading": "\n[purple]Dar hal Bargirie Resource Pack haye darkhast shode...[/purple]"
+        }
+      }
+    }
+  }
+}
