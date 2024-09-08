@@ -1,15 +1,20 @@
 import json
+import yaml
 import os
-from typing import Optional
 
 from src.utils.registry import get_install_path
 
 
-def __(key: str, attributes=None):
+def __(key: str, attributes=None, lang='default'):
     if attributes is None:
         attributes = {}
 
-    deflang = 'en_US'  # TODO
+    if lang == 'default':
+        with open(f'{get_install_path() or os.getcwd()}/config.yml') as file:
+            yml = yaml.safe_load(file)
+            deflang = yml['language']
+    else:
+        deflang = lang
 
     node_priority = key.split('.')
     with open(f'{get_install_path() or os.getcwd()}/lang/{deflang}/{node_priority[0]}.json') as file:
