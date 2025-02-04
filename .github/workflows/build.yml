@@ -19,6 +19,6 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: dist/build/generated/mcpm.exe
+          files: [dist/build/generated/mcpm.exe, CHANGELOG.md]
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
