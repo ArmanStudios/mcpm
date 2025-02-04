@@ -4,9 +4,9 @@ import {registerCommands} from "./commands";
 import {ModrinthAPI} from "./apis/modrinth/ModrinthAPI";
 
 export const modrinthClient = new ModrinthAPI({userAgent: {
-        projectName: "mcpm",
-        projectVersion: "0.0.1-EXPERIMENTAL",
-        githubUsername: "ArmanStudios"
+        projectName: pkg.name,
+        projectVersion: pkg.version,
+        githubUsername: pkg.author
     }
 });
 

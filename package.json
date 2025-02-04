@@ -15,7 +15,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cli": "tsx src/main.ts"
   },
-  "author": "IranMine123",
+  "author": "ArmanStudios",
   "license": "ISC",
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
