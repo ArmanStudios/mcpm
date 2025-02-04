@@ -15,10 +15,10 @@ jobs:
       - name: Build
         run: |
           npm i
-          ./build
+          npm run compile
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: [dist/build/generated/mcpm.exe, CHANGELOG.md]
+          files: [dist/build/generated/*, CHANGELOG.md]
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

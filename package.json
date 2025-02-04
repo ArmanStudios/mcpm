@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@types/node": "^22.13.1",
+    "@yao-pkg/pkg": "^6.3.0",
     "colorts": "^0.1.63",
     "commander": "^13.1.0",
     "node-fetch": "^3.3.2",
@@ -13,7 +14,8 @@
   "main": "src/main.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cli": "tsx src/main.ts"
+    "cli": "tsx src/main.ts",
+    "compile": "pkg src/main.ts --output dist/build/generated --targets node20-linux-x64,node20-macos-x64,node20-win-x64"
   },
   "author": "ArmanStudios",
   "license": "ISC",
