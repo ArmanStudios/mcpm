@@ -1,5 +1,8 @@
 name: mcpm Build for Windows
-on: [push]
+on:
+  push:
+    tags:
+      - "v*.*.*"
 jobs:
   build:
     name: Building mcpm
