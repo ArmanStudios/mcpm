@@ -1,0 +1,21 @@
+name: mcpm Build for Windows
+on: [push]
+jobs:
+  build:
+    name: Building mcpm
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Build
+        run: |
+          npm i
+          build
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: dist/build/generated/mcpm.exe
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
