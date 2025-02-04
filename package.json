@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "@types/node": "^22.13.1",
+    "colorts": "^0.1.63",
+    "commander": "^13.1.0",
+    "dotenv": "^16.4.7",
+    "js-yaml": "^4.1.0",
+    "node-fetch": "^3.3.2",
+    "yaml": "^2.7.0"
+  },
+  "type": "module",
+  "name": "mcpm",
+  "version": "0.0.1-EXPERIMENTAL",
+  "description": "a Minecraft Package Manager",
+  "main": "src/main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cli": "tsx src/main.ts"
+  },
+  "author": "IranMine123",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "tsx": "^4.19.2"
+  }
+}

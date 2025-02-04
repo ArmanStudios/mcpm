@@ -1,0 +1,7 @@
+{
+  "main": "dist/build/bundled/main.js",
+  "output": "dist/build/bundled/sea-prep.blob",
+  "assets": {
+    "config.yml": "assets/config.yml"
+  }
+}
