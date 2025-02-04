@@ -12,7 +12,7 @@ jobs:
       - name: Build
         run: |
           npm i
-          build
+          ./build
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
