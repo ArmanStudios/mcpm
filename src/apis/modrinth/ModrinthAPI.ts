@@ -28,6 +28,7 @@ class ModrinthAPI {
         opts?: {
             query?: URLSearchParams;
             base?: string;
+            body?: any;
         }
     ) {
         const queryStr = opts?.query ? "?" + opts.query.toString() : "";
@@ -35,6 +36,7 @@ class ModrinthAPI {
 
         const res = await fetch(url.toString(), {
             method,
+            body: opts?.body,
             headers: {
                 "User-Agent": this.userAgent,
                 Accept: "application/json",
