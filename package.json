@@ -15,7 +15,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cli": "tsx src/main.ts",
-    "compile": "pkg src/main.ts --output dist/build/generated --targets node20-linux-x64,node20-macos-x64,node20-win-x64"
+    "compile": "pkg dist/bundled/main.js -c package.json --output build/generated/mcpm"
   },
   "author": "ArmanStudios",
   "license": "ISC",
@@ -24,7 +24,10 @@
     "tsx": "^4.19.2"
   },
   "pkg": {
-    "scripts": "src/**/*.ts",
-    "assets": ["src/**/*.json", "src/**/*.yml"]
+    "targets": [
+      "node20-linux-x64",
+      "node20-macos-x64",
+      "node20-win-x64"
+    ]
   }
 }
