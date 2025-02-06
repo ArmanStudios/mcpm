@@ -30,6 +30,6 @@ jobs:
         with:
           body_path: CHANGELOG.md
           files: |
-            dist/build/generated/*
+            build/generated/*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
