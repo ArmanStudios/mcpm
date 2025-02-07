@@ -2,6 +2,9 @@ import pkg from '../package.json';
 import {Command} from "commander";
 import {registerCommands} from "./commands";
 import {ModrinthAPI} from "./apis/modrinth/ModrinthAPI";
+import {ConcreteConfig} from "./concrete";
+
+export const concreteConfig = new ConcreteConfig();
 
 export const modrinthClient = new ModrinthAPI({userAgent: {
         projectName: pkg.name,
