@@ -5,6 +5,7 @@
     "colorts": "^0.1.63",
     "commander": "^13.1.0",
     "node-fetch": "^3.3.2",
+    "readline-sync": "^1.4.10",
     "yaml": "^2.7.0"
   },
   "type": "module",
@@ -22,6 +23,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
+    "@types/readline-sync": "^1.4.8",
     "tsx": "^4.19.2"
   },
   "pkg": {
