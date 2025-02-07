@@ -14,13 +14,14 @@ import fs from "fs";
 import fetch from "node-fetch";
 import "colorts/lib/string";
 
-export async function downloadAndSaveFromURL(url: string, path: string) {
+export async function downloadAndSaveFromURL<T extends Record<string, any>>(url: string, path: string, options?: T) {
     const response = await fetch(url);
     if (!response.ok) {
         throw new Error(`Failed to fetch ${url}: ${response.statusText}`);
     }
 
     const filename = url.split("/")[url.split("/").length - 1]
+    const customName = options?.customName ?? filename;
 
     const fileStream = fs.createWriteStream(path);
     const totalBytes = Number(response.headers.get("content-length")) || 0;
@@ -32,9 +33,9 @@ export async function downloadAndSaveFromURL(url: string, path: string) {
         let message: string;
         if (totalBytes > 0) {
             const progressPercent = ((downloadedBytes / totalBytes) * 100).toFixed(2);
-            message = `[${spinnerIcons[spinnerIndex++ % spinnerIcons.length]}] Downloading ` + `${filename} `.magenta + `(${progressPercent}%)`.yellow;
+            message = `[${spinnerIcons[spinnerIndex++ % spinnerIcons.length]}] Downloading ` + `${customName} `.magenta + `(${progressPercent}%)`.yellow;
         } else {
-            message = `[${spinnerIcons[spinnerIndex++ % spinnerIcons.length]}] Downloading ` + `${filename} `.magenta + `(${downloadedBytes} bytes)`.yellow;
+            message = `[${spinnerIcons[spinnerIndex++ % spinnerIcons.length]}] Downloading ` + `${customName} `.magenta + `(${downloadedBytes} bytes)`.yellow;
         }
         process.stdout.write(`\r${message}`);
     }, 120);
@@ -50,5 +51,5 @@ export async function downloadAndSaveFromURL(url: string, path: string) {
     });
 
     clearInterval(spinnerInterval);
-    process.stdout.write("\rSuccessfully downloaded: ".green + `${filename}`.yellow);
+    process.stdout.write("\rSuccessfully downloaded: ".green + `${customName}\n`.yellow);
 }
