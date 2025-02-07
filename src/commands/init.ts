@@ -2,12 +2,13 @@ import concreteDefault from '../resources/concrete-default.json';
 import * as readLine from "readline/promises";
 import 'colorts/lib/string'
 import {writeFileSync} from "node:fs";
+import {concreteConfig} from "../main";
 
 export async function InitCommand(game_version: string | undefined, loader: string | undefined) {
     let concreteJson = concreteDefault;
     let rl = readLine.createInterface(process.stdin, process.stdout);
 
-    // concreteConfig.checkForConcreteFile(false)
+    concreteConfig.checkForConcreteFile(false)
 
     if (game_version) {
         concreteJson.game_version = game_version;
