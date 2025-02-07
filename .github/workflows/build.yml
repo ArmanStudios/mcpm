@@ -20,7 +20,7 @@ jobs:
         run: npm i
 
       - name: Bundle
-        run: npx esbuild src/main.ts --bundle --platform=node --format=cjs --outfile=dist/bundled/main.js --loader:.ts=ts
+        run: npm run bundle
 
       - name: Build Executable
         run: npm run compile
