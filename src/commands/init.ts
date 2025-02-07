@@ -2,7 +2,6 @@ import concreteDefault from '../resources/concrete-default.json';
 import * as readLine from "readline/promises";
 import 'colorts/lib/string'
 import {writeFileSync} from "node:fs";
-import {concreteConfig} from "../main";
 
 export async function InitCommand(game_version: string | undefined, loader: string | undefined) {
     let concreteJson = concreteDefault;
